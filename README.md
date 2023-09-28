@@ -5,4 +5,4 @@
 
 ## Docker
 1. Remove container not running: <br />
-docker rm $(docker ps -a -f "status=exited" -q)
+`docker rm $(docker ps -a -f "status=exited" -q)`

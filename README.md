@@ -12,3 +12,23 @@ Scripts: [download-frozen-image-v2.sh](https://raw.githubusercontent.com/moby/mo
 Load image: tar -cC 'target_dir' . | docker load
 Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 ```
+## Git
+1. Push local branch to remote branch: `git push -u <remote_name> <branch_name>`
+2. Remove file add before commit: `git reset <file_path>`
+3. 
+## K8s
+### [Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+### [Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs)
+1. Set config file: `export KUBECONFIG=\path\to\config1.yaml:\path\to\config2.yaml`
+2. Set context: `kubectl config use-context <name-context>`
+3. Set namespace: `kubectl config set-context --current --namespace=<namespace>`
+4. Check current-context: `kubectl config current-context`
+5. Check current-context and namespace: `kubectl config get-contexts`
+6. Port-forwarding: `kubectl port-forward <pod_name> <port>`
+7. Get pod: `kubectl get pods`
+8. Get pod with node info: `kubectl get pods -o wide`
+9. Get log pod: `kubectl logs -f [--tail n] <pod_name>`
+10. 
+## JQ - JSON Parsing
+1. List all values by keys: `jq '.key'`
+2. 

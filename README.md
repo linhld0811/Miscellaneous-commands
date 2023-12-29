@@ -13,9 +13,11 @@ Load image: tar -cC 'target_dir' . | docker load
 Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 ```
 ## Git
-1. Push local branch to remote branch: `git push -u <remote_name> <branch_name>`
-2. Remove file add before commit: `git reset <file_path>`
-3. 
+1. Add the Remote Repository: `git remote add origin <remote_url>`
+2. Push local branch to remote branch: `git push -u <remote_name> <branch_name>`
+3. Push the New Branch to the Remote Repository: `git push –u origin <branch name>`
+4. Remove file add before commit: `git reset <file_path>`
+5. 
 ## K8s
 ### [Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 ### [Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs)

@@ -13,6 +13,7 @@ Load image: tar -cC 'target_dir' . | docker load
 Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 ```
 ## Git
+### [Cheatsheet](https://www.freecodecamp.org/news/git-cheat-sheet/)
 1. Add the Remote Repository: `git remote add origin <remote_url>`
 2. Push local branch to remote branch: `git push -u <remote_name> <branch_name>`
 3. Push the New Branch to the Remote Repository: `git push –u origin <branch name>`

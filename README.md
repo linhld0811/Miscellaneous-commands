@@ -33,5 +33,5 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 9. Get log pod: `kubectl logs -f [--tail n] <pod_name>`
 10. 
 ## JQ - JSON Parsing
-1. List all values by keys: `jq '.key'`
+1. List all values by keys: `jq '.key'` or `jq '.key[]'` (if input is list of json)
 2. 

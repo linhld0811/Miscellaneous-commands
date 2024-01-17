@@ -20,8 +20,7 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 4. Remove file add before commit: `git reset <file_path>`
 5. 
 ## K8s
-### [Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-### [Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs)
+### [Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) | [Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs)
 1. Set config file: `export KUBECONFIG=\path\to\config1.yaml:\path\to\config2.yaml`
 2. Set context: `kubectl config use-context <name-context>`
 3. Set namespace: `kubectl config set-context --current --namespace=<namespace>`

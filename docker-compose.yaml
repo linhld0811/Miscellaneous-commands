@@ -5,6 +5,9 @@ services:
     volumes:
       - ./local/file/path:/container/file/path:ACCESS_MODE #[rw/ro]
       - ./local/directory/path:/container/directory/path
+    build:
+      context: /directory
+      dockerfile: Dockerfile
     # environment
     env_file: # If the same variable is defined in multiple files, the last definition takes precedence
       - ./.env
@@ -21,8 +24,12 @@ services:
     restart: always
     command: tail -F anything
     working_dir: /directory/path
+    depends_on:
+      - <name_other_service> # run before and stop after
     # resource:
     deploy:
+      mode: replicated
+      replicas: 2
       resources:
         limits: # prevent the container to allocate more.
           cpus: '0.50'

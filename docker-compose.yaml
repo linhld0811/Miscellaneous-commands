@@ -2,11 +2,9 @@ services:
   name_service:
     image: <name_image>
     container_name: <name_container>
-    
     volumes:
-      - ./local/file/path:/container/file/path
+      - ./local/file/path:/container/file/path:ACCESS_MODE #[rw/ro]
       - ./local/directory/path:/container/directory/path
-
     # environment
     env_file: # If the same variable is defined in multiple files, the last definition takes precedence
       - ./.env
@@ -15,3 +13,25 @@ services:
       - SHOW=true
       # or - SHOW: "true"
       # or - SHOW=${SHOW} with SHOW variable in .env
+    # mount port
+    # Port mapping is incompatible with network_mode: host
+    ports:
+      - IPADDR:HOSTPORT:CONTAINERPORT
+    network_mode: host
+    restart: always
+    command: tail -F anything
+    working_dir: /directory/path
+    # resource:
+    deploy:
+      resources:
+        limits: # prevent the container to allocate more.
+          cpus: '0.50'
+          memory: 50M
+        reservations: # guarantee the container can allocate at least the configured amount.
+          cpus: '0.25'
+          memory: 20M
+          devices:
+            - driver: nvidia
+              # count: 2
+              device_ids: ['0', '1']
+              capabilities: [gpu]

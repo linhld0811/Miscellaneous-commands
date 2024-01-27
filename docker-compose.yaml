@@ -1,0 +1,17 @@
+services:
+  name_service:
+    image: <name_image>
+    container_name: <name_container>
+    
+    volumes:
+      - ./local/file/path:/container/file/path
+      - ./local/directory/path:/container/directory/path
+
+    # environment
+    env_file: # If the same variable is defined in multiple files, the last definition takes precedence
+      - ./.env
+      - ./.env.override
+    environment: # When both env_file and environment are set for a service, values set by environment have precedence.
+      - SHOW=true
+      # or - SHOW: "true"
+      # or - SHOW=${SHOW} with SHOW variable in .env

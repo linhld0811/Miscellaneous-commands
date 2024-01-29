@@ -38,7 +38,7 @@ services:
           cpus: '0.25'
           memory: 20M
           devices:
-            - driver: nvidia
+          - driver: nvidia
               # count: 2
               device_ids: ['0', '1']
               capabilities: [gpu]

@@ -34,5 +34,6 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 ## JQ - JSON Parsing
 1. List all values by keys: `jq '.key'` or `jq '.key[]'` (if input is list of json)
 2. Get multiple values by multiple keys: `jq '.key[]|{key1, key2}'` (return dict) or `jq '.key[]|"\(.key1) \(.key2)"'` or <br /> `jq '.key[]|.key1 + " " + .key2'`
+3. Split value by key and get second_part: `jq '.key = (.key|split("--")|.[1])'`
 ## Audio
 1. Format file: `ffprobe -hide_banner -loglevel panic -show_format -show_streams -of json <audio_path> | jq '.streams[0].sample_rate'`

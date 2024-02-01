@@ -37,3 +37,8 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 3. Split value by key and get second_part: `jq '.key = (.key|split("--")|.[1])'`
 ## Audio
 1. Format file: `ffprobe -hide_banner -loglevel panic -show_format -show_streams -of json <audio_path> | jq '.streams[0].sample_rate'`
+## AWK
+1. FNR: number of records
+2. NR: number of records variable
+3. FILENAME: name of file
+4. ORS: Output Record Separator Variable

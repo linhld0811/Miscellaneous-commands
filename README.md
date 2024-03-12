@@ -2,7 +2,8 @@
 ## Linux
 1. Run process on range of cpu: <br />
 `taskset --cpu-list {start_core_idx}-{stop_core_idx}:1`
-
+2. Ping interval: <br />
+`ping -c ip|while read pong; do echo "$pong"; done`
 ## Docker
 1. Remove container not running: <br />
 `docker rm $(docker ps -a -f "status=exited" -q)`

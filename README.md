@@ -36,6 +36,8 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 2. Get multiple values by multiple keys: `jq '.key[]|{key1, key2}'` (return dict) or `jq '.key[]|"\(.key1) \(.key2)"'` or <br /> `jq '.key[]|.key1 + " " + .key2'`
 3. Split value by key and get second_part: `jq '.key = (.key|split("--")|.[1])'`
 4. Convert value of key to string: `jq -r '(.start|tostring) + "\t" + (.end|tostring)`
+5. Get all keys: `jq 'keys'`
+6. Get length of list: `jq length`
 ## Audio
 1. Format file: `ffprobe -hide_banner -loglevel panic -show_format -show_streams -of json <audio_path> | jq '.streams[0].sample_rate'`
 ## AWK

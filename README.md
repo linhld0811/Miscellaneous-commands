@@ -46,3 +46,13 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 2. NR: number of records variable
 3. FILENAME: name of file
 4. ORS: Output Record Separator Variable
+## Nvidia-profiler
+1. Install nvprof; nvvp: <br />
+`sudo apt-get install -y nvidia-visual-profiler`<br />
+`sudo apt-get install -y nvidia-profiler`<br />
+2. Non-visual: <br />
+`nvprof python train_mnist.py` <br />
+`nvprof --print-gpu-trace python train_mnist.py` <br />
+3. Visual:
+`nvprof -o prof.nvvp python train_mnist.py` <br />
+`nvvp prof.nvvp` <br />

@@ -53,6 +53,6 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 2. Non-visual: <br />
 `nvprof python train_mnist.py` <br />
 `nvprof --print-gpu-trace python train_mnist.py` <br />
-3. Visual:
+3. Visual: <br />
 `nvprof -o prof.nvvp python train_mnist.py` <br />
 `nvvp prof.nvvp` <br />

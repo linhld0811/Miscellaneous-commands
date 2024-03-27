@@ -40,10 +40,11 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 5. Get all keys: `jq 'keys'`
 6. Get length of list: `jq length`
 ## FFMPEG
-1. Download best video & best audio: `yt-dlp --no-check-certificates  -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" <yt_link>`
+1. Download best video & best audio: <br />
+`yt-dlp --no-check-certificates  -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" <yt_link>`
 2. Change fps video: `ffmpeg -i <input.mp4> -filter:v fps=25 <output.mp4>`
-3. Merge video vs audio: `ffmpeg -y -hide_banner -loglevel error -i <video.mp4> -i <audio.wav> -vcodec copy <output.mp4>`
-4. Format file: `ffprobe -hide_banner -loglevel panic -show_format -show_streams -of json <audio_path> | jq '.streams[0].sample_rate'`
+3. Merge video vs audio: <br />`ffmpeg -y -hide_banner -loglevel error -i <video.mp4> -i <audio.wav> -vcodec copy <output.mp4>`
+4. Format file: <br />`ffprobe -hide_banner -loglevel panic -show_format -show_streams -of json <audio_path> | jq '.streams[0].sample_rate'`
 5. Resample audio: `ffmpeg -v 8 -i <input.wav> -ac 1 -ar $sr -f wav -acodec pcm_s16le <output.wav>` 
 ## AWK
 1. FNR: number of records

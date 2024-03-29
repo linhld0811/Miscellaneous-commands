@@ -1,7 +1,8 @@
 # Miscellaneous-commands
 ## Linux
 1. Run process on range of cpu: <br />
-`taskset --cpu-list {start_core_idx}-{stop_core_idx}:1`
+`taskset --cpu-list {start_core_idx}-{stop_core_idx}:1` <br />
+[numactl Cheat sheet](https://man.freebsd.org/cgi/man.cgi?query=numactl&sektion=1&apropos=0&manpath=FreeBSD+11.2-RELEASE+and+Ports)
 2. Ping interval: <br />
 `ping -c ip|while read pong; do echo "$pong"; done`
 3. [NVF Cheat Sheet](https://access.redhat.com/documentation/pt-br/red_hat_openstack_platform/13/html/ovs-dpdk_end_to_end_troubleshooting_guide/nfv_command_cheatsheet#doc-wrapper)

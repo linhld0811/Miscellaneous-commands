@@ -52,6 +52,7 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 5. Format file: <br />`ffprobe -hide_banner -loglevel panic -show_format -show_streams -of json <audio_path> | jq '.streams[0].sample_rate'`
 6. Resample audio: `ffmpeg -v 8 -i <input.wav> -ac 1 -ar $sr -f wav -acodec pcm_s16le <output.wav>`
 7. Extract all frames of videos: `ffmpeg -loglevel error -y -i <input.mp4> -vf fps=25 -qmin 1 -q:v 1 -start_number 0 <image%d.png>`
+8. Extract audio from video: `ffmpeg -loglevel error -y -i <input.mp4> -strict -2 <output.wav>`
 ## AWK
 1. FNR: number of records
 2. NR: number of records variable

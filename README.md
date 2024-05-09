@@ -6,7 +6,8 @@
 2. Ping interval: <br />
 `ping -c ip|while read pong; do echo "$pong"; done`
 3. [NVF Cheat Sheet](https://access.redhat.com/documentation/pt-br/red_hat_openstack_platform/13/html/ovs-dpdk_end_to_end_troubleshooting_guide/nfv_command_cheatsheet#doc-wrapper)
-4. 
+4. Check Real-core and Hyperthread-core: <br />
+`cat $(find /sys/devices/system/cpu -regex ".*cpu[0-9]+/topology/thread_siblings_list") | sort -n | uniq`
 ## Docker
 1. Remove container not running: <br />
 `docker rm $(docker ps -a -f "status=exited" -q)`

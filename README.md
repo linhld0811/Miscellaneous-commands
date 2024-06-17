@@ -51,7 +51,8 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 1. Download best video & best audio: <br />
 `yt-dlp --no-check-certificates  -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" <yt_link>`
 2. Change fps video: `ffmpeg -i <input.mp4> -filter:v fps=25 <output.mp4>`
-3. Convert mp4 to webm: `ffmpeg -i <input.mp4> -c:v libvpx-vp9 -crf 30 -b:v 0 -b:a 128k -c:a libopus <output.webm>`<br />
+3. Convert mp4 to webm: <br />
+```ffmpeg -i <input.mp4> -c:v libvpx-vp9 -crf 30 -b:v 0 -b:a 128k -c:a libopus <output.webm>```
 [CRF range](https://stackoverflow.com/questions/47510489/ffmpeg-convert-mp4-to-webm-poor-results)
 4. Merge video vs audio: <br />`ffmpeg -y -hide_banner -loglevel error -i <video.mp4> -i <audio.wav> -vcodec copy <output.mp4>`
 5. Format file: <br />`ffprobe -hide_banner -loglevel panic -show_format -show_streams -of json <audio_path> | jq '.streams[0].sample_rate'`

@@ -73,3 +73,11 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 3. Visual: <br />
 `nvprof -o prof.nvvp python train_mnist.py` <br />
 `nvvp prof.nvvp` <br />
+## Cmake
+1. cuda toolkit: `-DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-xx.x`
+2. python path:
+   - Path to a directory `-DPYTHON_INCLUDE_DIR:PATH=/usr/include/python3.xx`
+   - Path to a program `-DPYTHON_EXECUTABLE:FILEPATH=/path/to/python`
+   - Path to a library `-DPYTHON_LIBRARY:FILEPATH=/usr/lib/libpython3.xx.so`
+3. Enable/disable GPU: `-DTRITON_ENABLE_GPU=OFF` or `-DTRITON_ENABLE_GPU=ON`
+4. 

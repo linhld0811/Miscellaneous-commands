@@ -8,6 +8,10 @@
 3. [NVF Cheat Sheet](https://access.redhat.com/documentation/pt-br/red_hat_openstack_platform/13/html/ovs-dpdk_end_to_end_troubleshooting_guide/nfv_command_cheatsheet#doc-wrapper)
 4. Check Real-core and Hyperthread-core: <br />
 ```cat $(find /sys/devices/system/cpu -regex ".*cpu[0-9]+/topology/thread_siblings_list") | sort -n | uniq```
+5. Check pid swap mem:
+```(echo "COMM PID SWAP"; for file in /proc/*/status ; do awk '/^Pid|VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | grep kB | grep -wv "0 kB" | sort -k 3 -n -r) | column -t```
+6. 
+7. 
 ## Docker
 1. Remove container not running: <br />
 ```docker rm $(docker ps -a -f "status=exited" -q)```
@@ -81,4 +85,6 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
    - Path to a program `-DPYTHON_EXECUTABLE:FILEPATH=/path/to/python`
    - Path to a library `-DPYTHON_LIBRARY:FILEPATH=/usr/lib/libpython3.xx.so`
 3. Enable/disable GPU: `-DTRITON_ENABLE_GPU=OFF` or `-DTRITON_ENABLE_GPU=ON`
-4. 
+4. Build Opencv compile with cmake: `-DWITH_FFMPEG=ON`
+5. Build Opencv with opencv_contrib: `-DOPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.2.0/modules`
+6. 

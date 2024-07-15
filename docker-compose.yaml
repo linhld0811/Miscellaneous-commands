@@ -20,6 +20,7 @@ services:
     # Port mapping is incompatible with network_mode: host
     ports:
       - IPADDR:HOSTPORT:CONTAINERPORT
+      - PORT # expose port use for scale container 
     network_mode: host
     restart: always
     command: tail -F anything

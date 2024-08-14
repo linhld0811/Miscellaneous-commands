@@ -18,4 +18,4 @@ export PYTHONPATH=\path\to\pythoncode
 ```
 export TORCH_HOME=\path\to\cache_dir
 ```
-&rarr; save to $TORCH_HOME/hub
+&rarr; save to `$TORCH_HOME/hub`

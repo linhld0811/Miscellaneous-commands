@@ -10,9 +10,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<TensorRT-${version}>/lib
 export PATH=$PATH:/usr/local/cuda-xx.x/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-xx.x/lib64
 ```
-3. Python:
+3. Python: Import code from other directory
 ```
-export PYTHONPATH=\path\to\pythoncode
+export PYTHONPATH=\path\to\python_code
 ```
 5. Torch cache: Path to save pre-trained models from torchvision/torch <br>
 ```

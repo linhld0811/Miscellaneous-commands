@@ -18,7 +18,7 @@ export PYTHONPATH=\path\to\python_code
 ```
 export TORCH_HOME=\path\to\cache_dir
 ```
-&rarr; save to `$TORCH_HOME/hub`
+&rarr; save to `$TORCH_HOME/hub` <br>
 6. Huggingface cache: Path to save pre-trained models from huggingface <br>
 ```
 export HUGGINGFACE_HUB_CACHE=\path\to\cache_dir

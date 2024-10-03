@@ -23,3 +23,10 @@ export TORCH_HOME=\path\to\cache_dir
 ```
 export HUGGINGFACE_HUB_CACHE=\path\to\cache_dir
 ```
+## GOLANG
+1. Debug grpc call <br>
+```
+export GRPC_GO_LOG_VERBOSITY_LEVEL=99
+export GRPC_GO_LOG_SEVERITY_LEVEL=info
+```
+2. 

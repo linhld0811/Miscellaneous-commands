@@ -90,4 +90,6 @@ Save image: tar -C 'ubuntu' -cf 'ubuntu.tar' .
 3. Enable/disable GPU: `-DTRITON_ENABLE_GPU=OFF` or `-DTRITON_ENABLE_GPU=ON`
 4. Build Opencv compile with cmake: `-DWITH_FFMPEG=ON`
 5. Build Opencv with opencv_contrib: `-DOPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.2.0/modules`
-6. 
+## Golang
+1. Build image should use alpine image
+2. 
